@@ -230,17 +230,22 @@ export default function Services() {
             Let us know about your project
           </p>
           <input
-            className="h-[52px] w-full rounded-sm border-[1px] bg-[#292929] p-[5px] font-[300] text-[#C2B9B0]"
+            className="h-[52px] w-full rounded-[6px] border-[1px] bg-[#292929] p-[10px] font-[300] text-[#C2B9B0]"
             placeholder="Full name*"
           />
           <input
-            className="h-[52px] w-full rounded-sm border-[1px] bg-[#292929] p-[5px] font-[300] text-[#C2B9B0]"
+            className="h-[52px] w-full rounded-[6px] border-[1px] bg-[#292929] p-[10px] font-[300] text-[#C2B9B0]"
             placeholder="Email Address*"
           />
-          <input
-            className="h-[165px] w-full rounded-sm border-[1px] bg-[#292929] p-[5px] font-[300] text-[#C2B9B0]"
-            placeholder="Write your message"
-          />
+          <div className="relative">
+            <textarea
+              className="h-[165px] w-full resize-none rounded-[6px] border-[1px] bg-[#292929] p-[10px] font-[300] text-[#C2B9B0]"
+              placeholder="Write your message"
+            />
+            <div className="absolute bottom-2 right-2 text-gray-400">
+              0/1000
+            </div>
+          </div>
           <button
             type="submit"
             className="h-[52px] rounded-lg bg-[#AFD275] text-[18px] font-[600] text-[#EDF1F3]"
@@ -254,7 +259,7 @@ export default function Services() {
         Stalk us
       </section>
 
-      <section className="mx-[80px] my-[40px] flex flex-row gap-[20px] text-[#EDF1F3]">
+      <section className="mx-[80px] my-[32px] flex flex-row gap-[20px] text-[#EDF1F3]">
         <i className="fa-brands fa-xl fa-youtube" />
         <i className="fa-brands fa-xl fa-steam" />
         <i className="fa-brands fa-xl fa-reddit" />
