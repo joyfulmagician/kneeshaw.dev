@@ -90,7 +90,7 @@ export default function FAQ() {
 
                   <AccordionContent className="flex flex-col gap-[5px]">
                     <div className="ml-[17px] flex w-full flex-row items-center justify-between gap-[22px] rounded-[6px] px-[10px] py-[10px] pr-[50px]">
-                      <img src="/images/home/line.png" alt="line" />
+                      <img src="/images/home/Line.png" alt="line" />
                       <div className="text-[15px] font-light text-[#EDF1F3]">
                         {f.answer}
                       </div>
