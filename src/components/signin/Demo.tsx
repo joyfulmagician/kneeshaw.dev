@@ -32,7 +32,7 @@ export default function Demo() {
             />
             <div>
               <input
-                type="email"
+                type="password"
                 placeholder="Enter your password"
                 className="h-[52px] w-[275px] rounded-[16px] border-[1px] bg-transparent pl-[10px] md:w-[475px]"
               />

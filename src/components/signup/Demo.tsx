@@ -1,12 +1,49 @@
 "use client";
+import React, { useState } from "react";
 
 import { FcGoogle } from "react-icons/fc";
-
+import Link from "next/link";
 import { useRole } from "@/contexts/RoleContext";
 import { ROLES } from "@/utils/constants";
 
 export default function Demo() {
   const { role } = useRole();
+
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const [firstName, setFirstName] = useState("");
+  const [secondName, setSecondName] = useState("");
+  const [firstnameerrorMessage, setFirstNameErrorMessage] = useState("");
+  const [secondnameerrorMessage, setSecondNameErrorMessage] = useState("");
+
+  const handleFirstNameChange = (event: any) => {
+    const value = event.target.value;
+    const regex = /^[a-zA-Z]*$/;
+
+    if (!regex.test(value)) {
+      setFirstNameErrorMessage("Please enter correctly!");
+    } else {
+      setFirstNameErrorMessage("");
+    }
+
+    setFirstName(value);
+  };
+
+  const handleSecondNameChange = (event: any) => {
+    const value = event.target.value;
+    const regex = /^[a-zA-Z]*$/;
+
+    if (!regex.test(value)) {
+      setSecondNameErrorMessage("Please enter correctly!");
+    } else {
+      setSecondNameErrorMessage("");
+    }
+
+    setSecondName(value);
+  };
 
   return (
     <>
@@ -46,18 +83,36 @@ export default function Demo() {
                 type="text"
                 placeholder="First name"
                 className="h-[52px] w-[219px] rounded-[16px] border border-[#C2CAD0] bg-transparent pl-[10px] text-[16px] font-normal text-white"
+                value={firstName}
+                onChange={handleFirstNameChange}
               />
+              <div>
+                {firstnameerrorMessage && (
+                  <div className="text-sm text-red-500">
+                    {firstnameerrorMessage}
+                  </div>
+                )}
+              </div>
 
               <input
                 type="text"
-                placeholder="Last name"
+                placeholder="First name"
                 className="h-[52px] w-[219px] rounded-[16px] border border-[#C2CAD0] bg-transparent pl-[10px] text-[16px] font-normal text-white"
+                value={secondName}
+                onChange={handleSecondNameChange}
               />
+              <div>
+                {secondnameerrorMessage && (
+                  <div className="text-sm text-red-500">
+                    {secondnameerrorMessage}
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="flex flex-col gap-[5px]">
               <input
-                type="text"
+                type="email"
                 placeholder="Enter your email"
                 className="h-[52px] w-[72%] min-w-[219px] rounded-[16px] border border-[#C2CAD0] bg-transparent pl-[10px] text-[16px] font-normal text-white"
               />
@@ -68,18 +123,7 @@ export default function Demo() {
 
             <div className="flex flex-col gap-[5px]">
               <input
-                type="text"
-                placeholder="Create username"
-                className="h-[52px] w-[72%] min-w-[219px] rounded-[16px] border border-[#C2CAD0] bg-transparent pl-[10px] text-[16px] font-normal text-white"
-              />
-              <span className="text-[14px] font-normal">
-                Ideal username is short, unique with no spaces
-              </span>
-            </div>
-
-            <div className="flex flex-col gap-[5px]">
-              <input
-                type="text"
+                type={showPassword ? "text" : "password"}
                 placeholder="Create password"
                 className="h-[52px] w-[72%] min-w-[219px] rounded-[16px] border border-[#EDF1F3] bg-transparent pl-[10px] text-[16px] font-normal text-white"
               />
@@ -87,8 +131,10 @@ export default function Demo() {
                 <span className="text-[14px] font-normal">
                   At least 8 characters, Aa, 123, &#
                 </span>
-
-                <span className="text-[14px] font-normal text-[#AFD275]">
+                <span
+                  className="text-[14px] font-normal text-[#AFD275]"
+                  onClick={togglePasswordVisibility}
+                >
                   show
                 </span>
               </div>
@@ -124,9 +170,9 @@ export default function Demo() {
 
             <p className="mb-[70px] text-center text-[14px] font-light">
               Already have an account?{" "}
-              <button type="button" className="font-semibold text-[#AFD275]">
-                Sign in
-              </button>
+              <Link href="/signin">
+                <span className="font-[600] text-[#AFD275]"> Sign In</span>
+              </Link>
             </p>
           </div>
         </div>
@@ -179,7 +225,7 @@ export default function Demo() {
 
             <div className="flex flex-col gap-[5px]">
               <input
-                type="text"
+                type="email"
                 placeholder="Enter your email"
                 className="h-[52px] w-[72%] min-w-[219px] rounded-[16px] border border-[#C2CAD0] bg-transparent pl-[10px] text-[16px] font-normal text-white"
               />
@@ -201,7 +247,7 @@ export default function Demo() {
 
             <div className="flex flex-col gap-[5px]">
               <input
-                type="text"
+                type="password"
                 placeholder="Create password"
                 className="h-[52px] w-[72%] min-w-[219px] rounded-[16px] border border-[#C2CAD0] bg-transparent pl-[10px] text-[16px] font-normal text-white"
               />
@@ -239,16 +285,17 @@ export default function Demo() {
               className="flex h-[52px] w-full flex-row items-center justify-center gap-[10px] rounded-[18px] border border-[#C2CAD0] "
             >
               <FcGoogle />
+
               <span className="text-[14px] font-semibold sm:text-[18px]">
                 Sign up with Google
               </span>
             </button>
 
             <p className="mb-[70px] text-center text-[14px] font-light">
-              Already have an account?{" "}
-              <button type="button" className="font-semibold text-[#AFD275]">
-                Sign in
-              </button>
+              Already have an account?
+              <Link href="/signin">
+                <span className="font-[600] text-[#AFD275]"> Sign In</span>
+              </Link>
             </p>
           </div>
         </div>
