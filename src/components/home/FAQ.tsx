@@ -102,6 +102,7 @@ export default function FAQ() {
           </div>
         </>
       )}
+
       {role === ROLES.CREATOR && (
         <div className="flex h-auto w-full justify-center">
           <div className="flex w-[60%] min-w-[350px] flex-col gap-[20px] rounded-[22px] bg-white p-[50px]">

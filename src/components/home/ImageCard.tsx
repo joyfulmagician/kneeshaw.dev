@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 interface Props {
   image: string;
   title: string;
@@ -14,7 +16,7 @@ export default function ImageCard({
   paragraph,
 }: Props) {
   return (
-    <div className="flex max-w-[306px] flex-col gap-[15px] rounded-[32px] border-[0.5px] border-[#EDF1F3] pb-[20px] odd:mb-[100px] even:mt-[100px]">
+    <div className="flex max-w-[306px] flex-col gap-[15px] rounded-[32px] border border-[#EDF1F3] pb-[20px] md:odd:mb-[100px] md:even:mt-[100px]">
       <img className="h-auto w-full" src={image} />
 
       <div className="flex flex-col items-center">
@@ -29,12 +31,13 @@ export default function ImageCard({
           {paragraph}
         </div>
 
-        <button
-          type="button"
-          className="h-[40px] rounded-[16px] border border-[#AFD276] px-[20px] text-[16px] font-bold leading-[20px] text-[#AFD276]"
+        <Link
+          href="/blog/detail"
+          type="Link"
+          className="flex h-[40px] items-center rounded-[16px] border border-[#AFD276] px-[20px] text-[16px] font-bold leading-[20px] text-[#AFD276]"
         >
           Read more
-        </button>
+        </Link>
       </div>
     </div>
   );
