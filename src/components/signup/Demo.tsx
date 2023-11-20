@@ -120,7 +120,7 @@ export default function Demo() {
 
             <button
               type="button"
-              className="h-full w-[163px] rounded-[18px] border bg-[#AFD275] font-[600]"
+              className="h-full w-[163px] rounded-[18px] border bg-[#AFD275] font-[600] text-white"
             >
               Gamer
             </button>
