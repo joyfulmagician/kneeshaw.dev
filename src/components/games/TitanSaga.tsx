@@ -45,7 +45,7 @@ export default function TitanSaga() {
 
       <img
         src="/images/games/image02.png"
-        className="mt-[-150px] hidden h-[623px] w-[600px] object-scale-down xl:block"
+        className="ml-auto mr-auto mt-[-150px] hidden h-[623px] w-[600px] object-scale-down xl:block"
       />
     </div>
   );
