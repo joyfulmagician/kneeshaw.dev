@@ -24,7 +24,7 @@ export default function TitanSaga() {
         </p>
 
         <div className="flex flex-col justify-center gap-[20px] sm:flex-row sm:justify-start">
-          <Link href="/games/apply/1">
+          <Link href="/games/titansaga/get">
             <button
               type="button"
               className="flex h-[44px] w-[180px] items-center justify-center rounded-lg bg-[#AFD275] px-[44px] py-[12px] text-[16px] text-base font-[600] sm:w-[210px]"
@@ -32,7 +32,7 @@ export default function TitanSaga() {
               Get it now
             </button>
           </Link>
-          <Link href="/games/apply/1/more">
+          <Link href="/games/titansaga">
             <button
               type="button"
               className="flex h-[44px] w-[180px] items-center justify-center rounded-lg border border-white bg-transparent px-[24px] py-[12px] text-[16px] font-[600] sm:w-[83px]"
@@ -45,7 +45,7 @@ export default function TitanSaga() {
 
       <img
         src="/images/games/image02.png"
-        className="mt-[-150px] hidden h-[623px] w-[600px] object-scale-down xl:block"
+        className="ml-auto mr-auto mt-[-130px] hidden h-[623px] w-[600px] object-scale-down xl:block"
       />
     </div>
   );

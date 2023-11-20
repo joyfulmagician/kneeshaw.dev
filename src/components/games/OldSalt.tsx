@@ -26,7 +26,7 @@ export default function OldSalt() {
       </div>
 
       <div className="flex flex-col justify-center gap-[20px] font-[600] sm:flex-row sm:justify-end">
-        <Link href="/games/apply/2">
+        <Link href="/games/oldsalt/get">
           <button
             type="button"
             className="flex h-[44px] w-[180px] items-center justify-center rounded-lg bg-[#AFD275] px-[44px] py-[12px] text-[16px] sm:w-[210px]"
@@ -34,7 +34,7 @@ export default function OldSalt() {
             Get it now
           </button>
         </Link>
-        <Link href="/games/apply/2/more">
+        <Link href="/games/oldsalt">
           <button
             type="button"
             className="flex h-[44px] w-[180px] items-center justify-center rounded-lg border border-white bg-transparent px-[24px] py-[12px] text-[16px] sm:w-[83px]"
