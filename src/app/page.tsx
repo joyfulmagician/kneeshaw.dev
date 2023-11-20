@@ -29,7 +29,7 @@ export default function Home() {
 
       <TopBorder />
 
-      <div className="m-[15px] flex cursor-pointer  flex-row-reverse font-light text-[#EDF1F3]">
+      <div className="m-[15px] flex cursor-pointer flex-row-reverse font-light text-[#EDF1F3]">
         <HomeSearch />
       </div>
 
