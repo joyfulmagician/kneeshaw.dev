@@ -14,7 +14,7 @@ export default function ImageCard({
   paragraph,
 }: Props) {
   return (
-    <div className="flex max-w-[306px] flex-col gap-[15px] rounded-[32px] border-[0.5px] border-[#EDF1F3] pb-[20px] odd:mb-[100px] even:mt-[100px]">
+    <div className="flex max-w-[306px] flex-col gap-[15px] rounded-[32px] border border-[#EDF1F3] pb-[20px] md:odd:mb-[100px] md:even:mt-[100px]">
       <img className="h-auto w-full" src={image} />
 
       <div className="flex flex-col items-center">

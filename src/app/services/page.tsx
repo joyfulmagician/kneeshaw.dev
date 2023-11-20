@@ -25,6 +25,7 @@ export default function Services() {
           <div className="h-[1px] w-1/3 border border-[#677746]" />
         </div>
       </section>
+
       <section className="mx-[80px] mt-[91px] flex justify-center text-center text-[#EDF1F3]">
         <h3 className="w-[966px] text-[20px] font-[400]">
           At Kneeshaw Development, we are passionate about delivering
@@ -38,7 +39,7 @@ export default function Services() {
             src="/images/services/service_image_01.svg"
             className="z-0 h-1/3 object-fill"
           />
-          <div className="z-1 mt-[-50px] flex h-[275px] flex-col bg-[#292929] p-[25px] text-center">
+          <div className="mt-[-50px] flex h-[275px] flex-col bg-[#292929] p-[25px] text-center">
             <p className="mt-[50px] text-[24px] font-[400] text-[#FFFFFF]">
               Mobile Game <br /> Development
             </p>
@@ -47,6 +48,7 @@ export default function Services() {
             </p>
           </div>
         </div>
+
         <div className="flex h-[335px] w-[284px] flex-col">
           <img
             src="/images/services/service_image_02.svg"
