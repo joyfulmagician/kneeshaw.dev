@@ -3,13 +3,14 @@
 import Link from "next/link";
 
 import clsx from "clsx";
-import { FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import { PiRedditLogoFill } from "react-icons/pi";
 import { FaSteam } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 
 import { useRole } from "@/contexts/RoleContext";
 import { ROLES } from "@/utils/constants";
-
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -92,10 +93,7 @@ export default function Footer() {
               placeholder="Your email"
             />
 
-            <button
-              type="button"
-              className="absolute right-[7px] top-[7px] h-[40px] w-[134px] rounded-[11px] bg-[#AFD275] text-[16px] font-semibold text-[#EDF1F3]"
-            >
+            <button className="absolute right-[7px] top-[7px] h-[40px] w-[134px] rounded-[11px] bg-[#AFD275] text-[16px] font-semibold text-[#EDF1F3]">
               Subscribe
             </button>
           </div>
