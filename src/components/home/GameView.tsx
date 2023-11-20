@@ -63,18 +63,30 @@ export default function GameView() {
   ];
 
   return (
-    <div className="flex w-full flex-col justify-between px-[40px]">
-      <div className="grid grid-cols-1 gap-[60px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {cards.map((props) => (
-          <ImageCard
-            key={props.title}
-            image={props.image}
-            title={props.title}
-            subtitle={props.subtitle}
-            paragraph={props.paragraph}
-          />
-        ))}
-      </div>
+    // <div className="flex w-full flex-col justify-between px-[40px]">
+    //   <div className="grid grid-cols-1 gap-[60px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    //     {cards.map((props) => (
+    //       <ImageCard
+    //         key={props.title}
+    //         image={props.image}
+    //         title={props.title}
+    //         subtitle={props.subtitle}
+    //         paragraph={props.paragraph}
+    //       />
+    //     ))}
+    //   </div>
+    // </div>
+
+    <div className="mx-[40px] flex flex-wrap justify-center gap-[60px] lg:gap-[80px]">
+      {cards.map((props) => (
+        <ImageCard
+          key={props.title}
+          image={props.image}
+          title={props.title}
+          subtitle={props.subtitle}
+          paragraph={props.paragraph}
+        />
+      ))}
     </div>
   );
 }

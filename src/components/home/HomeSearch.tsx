@@ -1,8 +1,8 @@
 "use client";
 
+import { CiSearch } from "react-icons/ci";
 import { useRole } from "@/contexts/RoleContext";
 import { ROLES } from "@/utils/constants";
-import { CiSearch } from "react-icons/ci";
 
 export default function DarkHomeSearch() {
   const { role } = useRole();

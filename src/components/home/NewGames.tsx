@@ -77,8 +77,8 @@ export default function NewGames() {
             Meet With Our Services
           </h2>
 
-          <div className="my-[20px] flex w-full flex-col justify-between px-[40px]">
-            <div className="grid grid-cols-1 gap-[60px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="my-[20px] flex w-full flex-col px-[40px]">
+            <div className="grid grid-cols-1 gap-[60px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {data.map((props) => (
                 <LightServiceCard
                   key={props.description}
