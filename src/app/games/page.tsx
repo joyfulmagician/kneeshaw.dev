@@ -76,9 +76,9 @@ export default function Games() {
 
       <section className="mx-[80px] mt-[120px] flex items-center">
         <div className="flex w-[100px] flex-row">
-          <div className="h-[1px] w-1/3 border border-[#AFD275]" />
-          <div className="h-[1px] w-1/3 border border-[#677746]" />
-          <div className="h-[1px] w-1/3 border border-[#677746]" />
+          <div className="w-1/3 border border-[#AFD275]" />
+          <div className="w-1/3 border border-[#677746]" />
+          <div className="w-1/3 border border-[#677746]" />
         </div>
       </section>
 

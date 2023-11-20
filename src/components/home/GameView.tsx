@@ -77,7 +77,7 @@ export default function GameView() {
     //   </div>
     // </div>
 
-    <div className="mx-[40px] flex flex-wrap justify-center gap-[80px]">
+    <div className="mx-[40px] flex flex-wrap justify-center gap-[60px] lg:gap-[80px]">
       {cards.map((props) => (
         <ImageCard
           key={props.title}
